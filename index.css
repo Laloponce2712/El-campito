@@ -1,0 +1,97 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+        /* evita scroll innecesario */
+    }
+
+    .contenedor {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("img/FondoDePantalla.png") no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Fallback si no se carga la imagen */
+    .contenedor::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #4a7c59 0%, #2d4a3a 100%);
+        z-index: -1;
+    }
+
+    .boton-inicio {
+        text-decoration: none;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .boton-inicio:hover {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(15px);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .boton-inicio:active {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+        .boton-inicio {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .boton-inicio {
+            padding: 12px 25px;
+            font-size: 16px;
+        }
+    }
+
+    /* Animación de entrada */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .boton-inicio {
+        animation: fadeInUp 1s ease-out;
+    }

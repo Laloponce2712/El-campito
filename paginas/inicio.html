@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Campito - Cabañas & Hospedaje Rural</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header id="header-inicio">
+        <img id="Logo-header" src="../img/logo_el_campito.png" alt="Logo" width="100px">
+        <h1>El Campito</h1>
+        <span>donde cada amanecer es una experiencia y cada noche un descanso verdadero.</span>
+        <nav>
+            <a href="#header-inicio">Inicio</a>
+            <a href="#Habitaciones">Habitaciones</a>
+            <a href="#footer">Nosotros</a>
+            <a href="Ingresar">ingresar</a>
+        </nav>
+    </header>
+
+    <section id="Habitaciones">
+        <h2>Habitaciones</h2>
+        <div class="habitaciones-container">
+            <div class="habitacion">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=300&fit=crop"
+                    alt="Habitación Estándar" loading="lazy">
+                <div class="habitacion-info">
+                    <h3>Habitación Estándar</h3>
+                    <p>Confort y funcionalidad para una estancia agradable. Incluye cama matrimonial, baño privado y
+                        vista al jardín.</p>
+                    <button class="boton-habitaciones" onclick="verHabitacion('estandar')">Ver habitación</button>
+                </div>
+            </div>
+            <div class="habitacion">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&h=300&fit=crop"
+                    alt="Habitación Deluxe" loading="lazy">
+                <div class="habitacion-info">
+                    <h3>Habitación Deluxe</h3>
+                    <p>Espacio y lujo para una experiencia inolvidable. Incluye sala de estar, terraza privada y
+                        servicios premium.</p>
+                    <button class="boton-habitaciones" onclick="verHabitacion('deluxe')">Ver habitación</button>
+                </div>
+            </div>
+            <div class="habitacion">
+                <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=500&h=300&fit=crop" alt="Suite"
+                    loading="lazy">
+                <div class="habitacion-info">
+                    <h3>Suite</h3>
+                    <p>Elegancia y exclusividad en cada detalle. Amplia suite con jacuzzi, minibar y atención
+                        personalizada.</p>
+                    <button class="boton-habitaciones" onclick="verHabitacion('suite')">Ver habitación</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nosotros</h3>
+                <p>El Campito es un refugio natural donde la tranquilidad y el confort se encuentran. Ofrecemos una
+                    experiencia única en contacto con la naturaleza.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>📍 Ruta Provincial 123, Km 45</li>
+                    <li>📞 +54 9 11 1234-5678</li>
+                    <li>✉️ info@elcampito.com</li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 El Campito. Todos los derechos reservados.
+            </div>
+    </footer>
+    <a href="#Logo-header"><button class="scroll-to-top" id="scrollToTopBtn" title="Volver arriba">
+    </button></a>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
